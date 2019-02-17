@@ -19,7 +19,7 @@ const Cont = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	top: -10vh;
+	top: -12vh;
 `
 const Card = styled.div`
 	background: #FFF;

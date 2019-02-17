@@ -12,7 +12,7 @@ const Skill = styled.div`
 	height: 60vh;
 	width: 100%;
 	position: relative;
-	top: -10vh;
+	top: -12vh;
 `
 
 

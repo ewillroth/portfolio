@@ -11,14 +11,19 @@ const About = () => {
 }
 
 const Abt = styled.div`
-	background: #000;
+	background: #010009;
 	width: 100%;
 	height: 60vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	font-family: 'Open Sans', sans-serif;
 	position: relative;
-	top: -10vh;
+	top: -12vh;
+	img {
+		width: 200px;
+		height: 200px;
+	}
 `
 
 const Styledp = styled.p`
