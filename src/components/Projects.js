@@ -27,7 +27,7 @@ const Proj = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	top: -12vh;
+	top: -80px;
 `
 const Projcard = styled.div`
 	background: #30343F;

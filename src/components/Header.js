@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
 
 const Header = props => {
 
@@ -9,8 +10,8 @@ const Header = props => {
 		//tracks scroll position to update navbar colors
 		document.addEventListener("scroll", () => {
 			console.log(window.scrollY)
-			if(window.scrollY>=860){
-				setScroll(860)
+			if(window.scrollY>=560){
+				setScroll(560)
 			} else{
 				setScroll(0)
 			}
@@ -36,8 +37,8 @@ const Header = props => {
 	return (
 		<Nav scroll={scroll}>
 			<Links>
-				<Button scroll={scroll} name="810" max="1300" onClick={clickToScroll}>About</Button>
-				<Button scroll={scroll} name="1300" max="1500" onClick={clickToScroll}>Skills</Button>
+				<Button scroll={scroll} name="560" onClick={clickToScroll}>About</Button>
+				<Button scroll={scroll} name="1300" onClick={clickToScroll}>Skills</Button>
 				<Button>Projects</Button>
 				<Button>Contact</Button>
 			</Links>
@@ -67,10 +68,33 @@ const Links = styled.div`
 	width: 400px;
 	font-size: 22px;
 `
+const shake = keyframes`
+25% {
+	transform: rotate(8deg);
+}
+
+50% {
+	transform: rotate(0deg);
+}
+
+75% {
+	transform: rotate(-8deg);
+}
+
+100% {
+	transform: rotate(0deg);
+}
+`
 
 const Button = styled.button`
 	color: #FFF;
+	:hover {
+		-webkit-animation: ${shake} 0.4s infinite;
+		animation: ${shake} 0.4s linear;
+		cursor: pointer;
+	}
 `
+
 
 
 export default Header;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Splash = props => {
 	return (
@@ -7,13 +7,19 @@ const Splash = props => {
 			<Title>Eric Willroth</Title>
 			<SubTitle>Web Developer</SubTitle>
 			<i className="material-icons" onClick={() => window.scroll({
-				top: 810,
+				top: 560,
 				left: 0,
 				behavior: 'smooth'
 			})}>expand_more</i>
 		</StyledSplash>
 	);
 }
+const grow = keyframes`
+
+100% {
+	transform: scale(1.5)
+}
+`
 
 const StyledSplash = styled.div`
 	background-image: url(https://images.unsplash.com/photo-1540675990483-e5441d694ff8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);
@@ -24,13 +30,17 @@ const StyledSplash = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 600px;
 	position: relative;
-	top: -12vh;
+	top: -80px;
 	color: #FFF;
 	i {
 		margin-top: 20px;
 		font-size: 50px;
+	}
+	i:hover {
+		animation: ${grow} 0.2s linear forwards;
+		cursor: pointer;
 	}
 `
 const Title = styled.h1`
