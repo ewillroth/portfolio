@@ -47,7 +47,7 @@ const Header = props => {
 }
 
 const Nav = styled.div`
-	background: ${props => props.scroll >= 860 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
+	background: ${props => props.scroll >= 560 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
 	width: 100%;
 	display: flex;
 	align-items: center;
