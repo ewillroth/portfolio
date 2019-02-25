@@ -4,7 +4,7 @@ import ReactIcon from "../assets/icons/DevIcons-01.svg";
 import ReduxIcon from "../assets/icons/DevIcons-14.svg";
 import JavaScriptIcon from "../assets/icons/DevIcons-03.svg";
 import ExpressIcon from "../assets/icons/DevIcons-04.svg";
-import VueIcon from "../assets/icons/DevIcons-05.svg";
+// import VueIcon from "../assets/icons/DevIcons-05.svg";
 import GitIcon from "../assets/icons/DevIcons-06.svg";
 import SocketIcon from "../assets/icons/DevIcons-07.svg";
 import PostgeSQLIcon from "../assets/icons/DevIcons-08.svg";
@@ -12,11 +12,14 @@ import NodeIcon from "../assets/icons/DevIcons-09.svg";
 import NPMIcon from "../assets/icons/DevIcons-10.svg";
 import CSSIcon from "../assets/icons/DevIcons-13.svg";
 import HTMLIcon from "../assets/icons/DevIcons-15.svg";
+import SassIcon from '../assets/icons/DevIcons-02.svg';
+import MaterialIcon from '../assets/icons/DevIcons-11.svg';
 
 
 const Skills = () => {
 	return (
 		<Skill>
+			<h1>Skills</h1>
 			<IconContainer>
 				<Icon>
 					<p>React</p>
@@ -42,9 +45,15 @@ const Skills = () => {
 					</a>
 				</Icon>
 				<Icon>
-					<p>Vue.js</p>
-					<a href="https://vuejs.org">
-						<img src={VueIcon} alt="Vue.js"/>
+					<p>NPM</p>
+					<a href="https://www.npmjs.com">
+						<img src={NPMIcon} alt="NPM"/>
+					</a>
+				</Icon>
+				<Icon>
+					<p>Sass</p>
+					<a href="https://sass-lang.com/">
+						<img className="smallimg" src={SassIcon} alt="Sass"/>
 					</a>
 				</Icon>
 				<Icon>
@@ -71,12 +80,6 @@ const Skills = () => {
 					</a>
 				</Icon>
 				<Icon>
-					<p>NPM</p>
-					<a href="https://www.npmjs.com">
-						<img src={NPMIcon} alt="NPM"/>
-					</a>
-				</Icon>
-				<Icon>
 					<p>CSS3</p>
 					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
 						<img src={CSSIcon} alt="CSS3"/>
@@ -88,6 +91,12 @@ const Skills = () => {
 						<img src={HTMLIcon} alt="HTML5"/>
 					</a>
 				</Icon>
+				<Icon>
+					<p>Material-UI</p>
+					<a href="https://material-ui.com/">
+						<img className="smallimg" src={MaterialIcon} alt="Material-UI"/>
+					</a>
+				</Icon>
 			</IconContainer>
 		</Skill>
 	);
@@ -95,15 +104,19 @@ const Skills = () => {
 
 const Skill = styled.div`
 	background: #010009;
-	height: 600px;
 	width: 100%;
 	position: relative;
 	top: -80px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	font-family: 'Nunito', sans-serif;
 	align-items: center;
 	color: #FFF;
+		h1 {
+		font-size: 30px;
+		margin-bottom: 80px;
+	}
 `
 
 const IconContainer = styled.div`
@@ -120,10 +133,16 @@ const Icon = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-family: 'Nunito', sans-serif;
 	align-items: center;
 	img {
 		width: 150px;
 		height: 150px;
+	}
+	.smallimg {
+		width: 120px;
+		height: 120px;
+		margin: 15px;
 	}
 `
 

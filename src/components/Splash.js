@@ -7,7 +7,7 @@ const Splash = props => {
 			<Title>Eric Willroth</Title>
 			<SubTitle>Web Developer</SubTitle>
 			<i className="material-icons" onClick={() => window.scroll({
-				top: 560,
+				top: 494,
 				left: 0,
 				behavior: 'smooth'
 			})}>expand_more</i>
@@ -30,7 +30,7 @@ const StyledSplash = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 600px;
+	height: 700px;
 	position: relative;
 	top: -80px;
 	color: #FFF;
@@ -46,12 +46,14 @@ const StyledSplash = styled.div`
 const Title = styled.h1`
 	font-size: 40px;
 	font-weight: 500;
+		font-family: 'Merriweather', serif;
 `
 
 const SubTitle = styled.h1`
 	font-size: 24px;
 	font-weight 300;
 	margin-top: 20px;
+	font-family: 'Merriweather', serif;
 `
 
 

@@ -10,8 +10,8 @@ const Header = props => {
 		//tracks scroll position to update navbar colors
 		document.addEventListener("scroll", () => {
 			console.log(window.scrollY)
-			if(window.scrollY>=560){
-				setScroll(560)
+			if(window.scrollY>=600){
+				setScroll(600)
 			} else{
 				setScroll(0)
 			}
@@ -37,17 +37,17 @@ const Header = props => {
 	return (
 		<Nav scroll={scroll}>
 			<Links>
-				<Button scroll={scroll} name="560" onClick={clickToScroll}>About</Button>
-				<Button scroll={scroll} name="1300" onClick={clickToScroll}>Skills</Button>
-				<Button>Projects</Button>
-				<Button>Contact</Button>
+				<Button name="494" onClick={clickToScroll}>About</Button>
+				<Button name="1064" onClick={clickToScroll}>Skills</Button>
+				<Button name="1737" onClick={clickToScroll}>Projects</Button>
+				<Button name="1800" onClick={clickToScroll}>Contact</Button>
 			</Links>
 		</Nav>
 	);
 }
 
 const Nav = styled.div`
-	background: ${props => props.scroll >= 560 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
+	background: ${props => props.scroll >= 600 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -56,7 +56,7 @@ const Nav = styled.div`
 	top: 0vh;
 	height: 80px;
 	color: #FFF;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Merriweather', serif;
 	font-weight: 400;
 	z-index: 1000;
 `
@@ -67,10 +67,11 @@ const Links = styled.div`
 	text-decoration: none;
 	width: 400px;
 	font-size: 22px;
+	font-family: 'Merriweather', serif;
 `
 const shake = keyframes`
 25% {
-	transform: rotate(8deg);
+	transform: rotate(6deg);
 }
 
 50% {
@@ -78,7 +79,7 @@ const shake = keyframes`
 }
 
 75% {
-	transform: rotate(-8deg);
+	transform: rotate(-6deg);
 }
 
 100% {
