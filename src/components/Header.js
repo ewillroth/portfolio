@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styled, {keyframes} from 'styled-components';
 
-
 const Header = props => {
 
 	const [scroll, setScroll] = useState(window.scrollY)
+	const [showMenu, setShowMenu] = useState(false)
 
 	const trackScroll = () => {
 		//tracks scroll position to update navbar colors
@@ -24,27 +24,84 @@ const Header = props => {
 		}
 	}
 
+	
 	const clickToScroll = (e) => {
-		window.scroll({
-			top: e.target.name,
-			left: 0,
-			behavior: 'smooth'
+		document.getElementById(e.target.name).scrollIntoView({
+			behavior:'smooth'
 		})
-}
+	}
+
+	const toggleMenu = () => {
+		setShowMenu(!showMenu)
+	}
 
 	useEffect(trackScroll, [])
 
 	return (
-		<Nav scroll={scroll}>
-			<Links>
-				<Button name="494" onClick={clickToScroll}>About</Button>
-				<Button name="1064" onClick={clickToScroll}>Skills</Button>
-				<Button name="1737" onClick={clickToScroll}>Projects</Button>
-				<Button name="1800" onClick={clickToScroll}>Contact</Button>
-			</Links>
-		</Nav>
+		<>
+			<Nav scroll={scroll}>
+				<Links>
+					<Button name="about" onClick={clickToScroll}>About</Button>
+					<Button name="skills" onClick={clickToScroll}>Skills</Button>
+					<Button name="projects" onClick={clickToScroll}>Projects</Button>
+					<Button name="contact" onClick={clickToScroll}>Contact</Button>
+				</Links>
+			</Nav>
+			<SmallNav scroll={scroll}>
+				<SmallNavLinks showMenu={showMenu}>
+					<Button name="about" onClick={clickToScroll}>About</Button>
+					<Button name="skills" onClick={clickToScroll}>Skills</Button>
+					<Button name="projects" onClick={clickToScroll}>Projects</Button>
+					<Button name="contact" onClick={clickToScroll}>Contact</Button>
+					<Button onClick={toggleMenu}>X</Button>
+				</SmallNavLinks>
+				<Burger showMenu={showMenu} onClick={toggleMenu}>
+					<i class="material-icons">
+						menu
+					</i>
+				</Burger>
+			</SmallNav>
+		</>
 	);
 }
+
+const SmallNav = styled.div`
+	display: none;
+	background: ${props => props.scroll >= 600 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
+	position: sticky;
+	top: 0vh;
+	height: 80px;
+	color: #CCCECE;
+	font-family: 'Merriweather', serif;
+	font-weight: 400;
+	z-index: 1000;
+	@media (max-width: 1050px) {
+		display: flex;
+	}
+
+`
+
+const Burger = styled.div`
+	display: none;
+	color: #CCCECE;
+	cursor: pointer
+	margin-right: 10px;
+	@media (max-width: 1050px) {
+		display: ${props => props.showMenu ? 'none' : 'flex'};
+	}
+	i {
+		font-size: 40px;
+	}
+`
+
+const SmallNavLinks = styled.div`
+	display: ${props => props.showMenu ? 'flex' : 'none'};
+	justify-content: space-evenly;
+	flex-direction: column;
+`
 
 const Nav = styled.div`
 	background: ${props => props.scroll >= 600 ? 'rgba(1,0,9,100)' : 'rgba(0, 0, 0, 0)'};
@@ -55,10 +112,13 @@ const Nav = styled.div`
 	position: sticky;
 	top: 0vh;
 	height: 80px;
-	color: #FFF;
+	color: #CCCECE;
 	font-family: 'Merriweather', serif;
 	font-weight: 400;
 	z-index: 1000;
+	@media (max-width: 1050px) {
+		display: none;
+	}
 `
 
 const Links = styled.div`
@@ -88,7 +148,7 @@ const shake = keyframes`
 `
 
 const Button = styled.button`
-	color: #FFF;
+	color: #CCCECE;
 	:hover {
 		-webkit-animation: ${shake} 0.4s infinite;
 		animation: ${shake} 0.4s linear;

@@ -6,9 +6,7 @@ const Splash = props => {
 		<StyledSplash>
 			<Title>Eric Willroth</Title>
 			<SubTitle>Web Developer</SubTitle>
-			<i className="material-icons" onClick={() => window.scroll({
-				top: 494,
-				left: 0,
+			<i className="material-icons" onClick={() => document.getElementById('about').scrollIntoView({
 				behavior: 'smooth'
 			})}>expand_more</i>
 		</StyledSplash>
@@ -33,7 +31,7 @@ const StyledSplash = styled.div`
 	height: 700px;
 	position: relative;
 	top: -80px;
-	color: #FFF;
+	color: #CCCECE;
 	i {
 		margin-top: 20px;
 		font-size: 50px;

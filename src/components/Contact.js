@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import gitHubIcon from '../assets/icons/github-original.svg'
-import linkedInIcon from '../assets/icons/linkedin-plain.svg'
-import phoneIcon from '../assets/icons/phone-receiver.svg'
-import emailIcon from '../assets/icons/close-envelope.svg'
+import gitHubIcon from '../assets/icons/ContactIcons-03.svg'
+import linkedInIcon from '../assets/icons/ContactIcons-04.svg'
+import phoneIcon from '../assets/icons/ContactIcons-02.svg'
+import emailIcon from '../assets/icons/ContactIcons-01.svg'
 
 const Contact = () => {
 	return (
-		<Cont>
+		<Cont id="contact">
 			<ContactCard>
-				<img src={phoneIcon}></img>
+				<a href="tel:+12816852086"><img src={phoneIcon} alt="phone"></img></a>
 				<p>281-685-2086</p>
 			</ContactCard>
 			<ContactCard>
-				<a href="mailto:ewillroth@gmail.com"><img id="mailimg" src={emailIcon}></img></a>
+				<a href="mailto:ewillroth@gmail.com"><img alt="email" src={emailIcon}></img></a>
 				<p id="mailp">ewillroth@gmail.com</p>
 			</ContactCard>
 			<ContactCard>
@@ -29,14 +29,13 @@ const Contact = () => {
 }
 
 const Cont = styled.div`
-	background: #FFF;
+	background: #CCCECE;
 	height: 50vh;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	position: relative;
 	flex-wrap: wrap;
 `
 const ContactCard = styled.div`

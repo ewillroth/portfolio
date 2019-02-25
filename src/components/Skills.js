@@ -18,7 +18,7 @@ import MaterialIcon from '../assets/icons/DevIcons-11.svg';
 
 const Skills = () => {
 	return (
-		<Skill>
+		<Skill id="skills">
 			<h1>Skills</h1>
 			<IconContainer>
 				<Icon>
@@ -112,11 +112,11 @@ const Skill = styled.div`
 	justify-content: flex-start;
 	font-family: 'Nunito', sans-serif;
 	align-items: center;
-	color: #FFF;
+	color: #CCCECE;
 		h1 {
-		font-size: 30px;
-		margin-bottom: 80px;
-	}
+			font-size: 30px;
+			margin-bottom: 80px;
+		}
 `
 
 const IconContainer = styled.div`

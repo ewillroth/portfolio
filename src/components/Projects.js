@@ -1,65 +1,102 @@
 import React from 'react';
 import styled from 'styled-components';
+import ordeerLanding from '../assets/images/ordeerLanding.png'
+import settleLanding from '../assets/images/settleLanding.png'
 
 const Projects = () => {
 	return (
-		<Proj>
-			<Projcard>
+		<Proj id="projects">
+			<h1>Projects</h1>
 				<Project>
-					<p>Ordeer</p>
+					<p className="projName">Ordeer</p>
 					<p>Group project built in 3 weeks with two other students</p>
-					<ul>
-						<li>Contains only functional components to utilize React Hooks</li>
-						<li>Learned & implemented Material-UI to create display cards for each menu item</li>
-						<li>I focused on front-end code including the registration page, order page and Jest testing</li>
-						<li>Code: github.com/restaurant-ordering/ordeer</li>
-					</ul>
+					<div>
+						<a href='http://www.ordeer.net'>
+							<img width='380px' src={ordeerLanding} alt="project landing page" />
+						</a>
+						<ul>
+							<li>Contains only functional components to utilize React Hooks</li>
+							<li>Learned & implemented Material-UI to create display cards for each menu item</li>
+							<li>I focused on front-end code including the registration page, order page and Jest testing</li>
+							<li>Code: github.com/restaurant-ordering/ordeer</li>
+						</ul>
+					</div>
 				</Project>
 				<Project>
-					<p>Settle</p>
+					<p className="projName">Settle</p>
 					<p>A tool to help groups make decisions</p>
-					<ul>
-						<li>Awarded most technical in my cohort</li>
-						<li>Learned & implemented socket.io to enable realtime updates for suggestions and participants</li>
-						<li>Used Firebase storage to enable users to upload images</li>
-						<li>Live site: settleit.app | Code: github.com/ewillroth/settle</li>
-					</ul>
+					<div>
+						<a href='https://settleit.app'>
+							<img width='380px' src={settleLanding} alt="project landing page" />
+						</a>
+						<ul>
+							<li>Awarded most technical in my cohort</li>
+							<li>Learned & implemented socket.io to enable realtime updates for suggestions and participants</li>
+							<li>Used Firebase storage to enable users to upload images</li>
+							<li>Live site: settleit.app | Code: github.com/ewillroth/settle</li>
+						</ul>
+					</div>
 				</Project>
-			</Projcard>
 		</Proj>
 	);
 }
 
 const Proj = styled.div`
-	background: linear-gradient(#010009, #FFF);
-	height: 100vh;
+	background: #010009;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	top: -80px;
 	margin-bottom: -80px
-`
-const Projcard = styled.div`
-	background: #000;
-	height: 80%;
-	width: 90%;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly
+	padding: 80px 0px;
+	color: #CCCECE;
+	font-family: 'Nunito', sans-serif;
+		h1 {
+			font-size: 30px;
+			margin-bottom: 60px;
+		}
+		.projName {
+			font-size: 26px;
+			margin-top: 20px;
+		}
 `
 
 const Project = styled.div`
-	color: #fff;
+	color: #CCCECE;
 	font-family: 'Nunito', sans-serif;
 	margin: 10px;
 	display: flex;
 	flex-direction: column;
-	p {
-		margin: 10px 0px;
+	justify-content: center;
+	align-items: center;
+	width: 100%
+	div {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		li {
+			width: 35vw;
+			margin-top: 20px
+		}
+		@media (max-width: 830px){
+			flex-direction: column;
+			li {
+				width: 85vw;
+				text-align: center;
+			}
+		}
 	}
-`
+	a {
+		margin-right: 20px;
+	}
+	p {
+		margin-bottom: 20px;
+	}
 
+`
 
 export default Projects;
