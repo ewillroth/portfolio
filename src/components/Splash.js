@@ -7,7 +7,7 @@ const Splash = props => {
 			<Title>Eric Willroth</Title>
 			<SubTitle>Web Developer</SubTitle>
 			<i className="material-icons" onClick={() => document.getElementById('about').scrollIntoView({
-				behavior: 'smooth'
+				behavior: 'smooth', block: 'start'
 			})}>expand_more</i>
 		</StyledSplash>
 	);

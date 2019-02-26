@@ -88,6 +88,9 @@ const Project = styled.div`
 				width: 85vw;
 				text-align: center;
 			}
+			p {
+				text-align: center;
+			}
 		}
 	}
 	a {

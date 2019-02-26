@@ -27,7 +27,7 @@ const Header = props => {
 	
 	const clickToScroll = (e) => {
 		document.getElementById(e.target.name).scrollIntoView({
-			behavior:'smooth'
+			behavior:'smooth', block: 'start'
 		})
 	}
 
