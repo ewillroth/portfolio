@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "f12019c1fe2c3f6e6a33e465d7cd2d5b",
-    "url": "/static/media/DevIcons-10.f12019c1.svg"
+    "revision": "81214897760f08124fb96107a0b99a34",
+    "url": "/static/media/DevIcons-09.81214897.svg"
   },
   {
-    "revision": "82398e19e4bc518026e7",
+    "revision": "22fc9edb76b944e77e15",
     "url": "/static/css/main.a8081377.chunk.css"
   },
   {
@@ -12,8 +12,12 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "10dd62e9ce233211122f",
-    "url": "/static/js/2.10dd62e9.chunk.js"
+    "revision": "896086327be3ff985df9",
+    "url": "/static/js/2.89608632.chunk.js"
+  },
+  {
+    "revision": "ef3b23767ebfa17dd0aa1312b066a11a",
+    "url": "/static/media/linkedinpic.ef3b2376.jpeg"
   },
   {
     "revision": "0c3a2bb9ca1c674069cf44b85b5ae7e4",
@@ -44,12 +48,12 @@ self.__precacheManifest = [
     "url": "/static/media/DevIcons-08.cae35285.svg"
   },
   {
-    "revision": "81214897760f08124fb96107a0b99a34",
-    "url": "/static/media/DevIcons-09.81214897.svg"
+    "revision": "22fc9edb76b944e77e15",
+    "url": "/static/js/main.22fc9edb.chunk.js"
   },
   {
-    "revision": "82398e19e4bc518026e7",
-    "url": "/static/js/main.82398e19.chunk.js"
+    "revision": "f12019c1fe2c3f6e6a33e465d7cd2d5b",
+    "url": "/static/media/DevIcons-10.f12019c1.svg"
   },
   {
     "revision": "7963a67853a3c652b40a6e41816e2609",
@@ -92,7 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/ContactIcons-01.e9419679.svg"
   },
   {
-    "revision": "f5b24a85d095fb7ac02f67467a0aa576",
+    "revision": "00b806ed3dd31e2731c11efc38320df2",
     "url": "/index.html"
   }
 ];
