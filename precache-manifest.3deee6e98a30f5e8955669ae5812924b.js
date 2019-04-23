@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/DevIcons-09.81214897.svg"
   },
   {
-    "revision": "fd76c397c65472cf0852",
+    "revision": "fcf7206208cfe96e7396",
     "url": "/static/css/main.a8081377.chunk.css"
   },
   {
@@ -12,12 +12,16 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "896086327be3ff985df9",
-    "url": "/static/js/2.89608632.chunk.js"
+    "revision": "09b0f3e3cf6b8307e259",
+    "url": "/static/js/2.09b0f3e3.chunk.js"
   },
   {
     "revision": "ef3b23767ebfa17dd0aa1312b066a11a",
     "url": "/static/media/linkedinpic.ef3b2376.jpeg"
+  },
+  {
+    "revision": "160b6fda64a90ceeb8a037632b5ca69d",
+    "url": "/static/media/ewillroth_resume.160b6fda.pdf"
   },
   {
     "revision": "0c3a2bb9ca1c674069cf44b85b5ae7e4",
@@ -48,8 +52,8 @@ self.__precacheManifest = [
     "url": "/static/media/DevIcons-08.cae35285.svg"
   },
   {
-    "revision": "fd76c397c65472cf0852",
-    "url": "/static/js/main.fd76c397.chunk.js"
+    "revision": "fcf7206208cfe96e7396",
+    "url": "/static/js/main.fcf72062.chunk.js"
   },
   {
     "revision": "f12019c1fe2c3f6e6a33e465d7cd2d5b",
@@ -96,7 +100,7 @@ self.__precacheManifest = [
     "url": "/static/media/ContactIcons-01.e9419679.svg"
   },
   {
-    "revision": "a75d2ca76f80265ba9d7ab57f229c09b",
+    "revision": "6db5a1f27a549e6a264d620fa8ed35ae",
     "url": "/index.html"
   }
 ];
